@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry
+  AppRegistry,
+  View
 } from 'react-native';
 
-import BarraNavegacao from './src/components/BarraNavegacao'
+import CenaPrincipal from './src/components/CenaPrincipal';
 
 export default class ReactNativeNavigationPages extends Component{
 	render(){
 		return(
-			<BarraNavegacao />
+			<CenaPrincipal />
 		);
 	}
 }
