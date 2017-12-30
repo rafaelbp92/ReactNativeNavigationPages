@@ -4,12 +4,12 @@ import {
   View
 } from 'react-native';
 
-import CenaPrincipal from './src/components/CenaPrincipal';
+import CenaClientes from './src/components/CenaClientes';
 
 export default class ReactNativeNavigationPages extends Component{
 	render(){
 		return(
-			<CenaPrincipal />
+			<CenaClientes />
 		);
 	}
 }
