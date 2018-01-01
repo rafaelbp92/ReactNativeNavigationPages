@@ -3,17 +3,15 @@ import {
   View,
   StatusBar,
   Image,
-  StyleSheet
+  Text
 } from 'react-native';
 
 
 import BarraNavegacao from './BarraNavegacao';
 
-const logo = require('../images/logo.png');
-const menuCliente = require('../images/menu_cliente.png');
-const menuContato = require('../images/menu_contato.png');
-const menuEmpresa = require('../images/menu_empresa.png');
-const menuServico = require('../images/menu_servico.png');
+const detalhesCliente = require('../images/detalhe_cliente.png');
+const cliente1 = require('../images/cliente1.png');
+const cliente2 = require('../images/cliente2.png');
 
 export default class CenaClientes extends Component {
 	render() {
@@ -24,25 +22,24 @@ export default class CenaClientes extends Component {
 				/>
 
 				<BarraNavegacao />
+
+				<View>
+					<Image source={detalhesCliente} />
+					<Text>Nossos Clientes</Text>
+				</View>
+
+				<View>
+					<Image source={cliente1} />
+					<Text>Lorem ipsum dolorem</Text>
+				</View>
+
+				<View>
+					<Image source={cliente2} />
+					<Text>Lorem ipsum dolorem</Text>
+				</View>
 				
 
 			</View>
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	logo: {
-		marginTop: 30,
-		alignItems: 'center'
-	},
-	menu: {
-		alignItems: 'center'
-	},
-	menuGrupo: {
-		flexDirection: 'row'
-	},
-	menuGrupoItem: {
-		margin: 15
-	}
-});
