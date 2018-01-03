@@ -32,6 +32,8 @@ export default class CenaPrincipal extends Component {
 					<View style={styles.menuGrupo}>
 
 						<TouchableHighlight
+							underlayColor={'#B9C941'}
+							activeOpacity={0.3}
 							onPress={() => {
 								this.props.navigation.navigate('Clients');
 							}}
@@ -40,6 +42,8 @@ export default class CenaPrincipal extends Component {
 						</TouchableHighlight>
 
 						<TouchableHighlight
+							underlayColor={'#61BD8C'}
+							activeOpacity={0.3}
 							onPress={() => {
 								this.props.navigation.navigate('Contacts');
 							}}
@@ -52,6 +56,8 @@ export default class CenaPrincipal extends Component {
 					<View style={styles.menuGrupo}>
 
 						<TouchableHighlight
+							underlayColor={'#EC7148'}
+							activeOpacity={0.3}
 							onPress={() => {
 								this.props.navigation.navigate('Company');
 							}}
@@ -60,6 +66,8 @@ export default class CenaPrincipal extends Component {
 						</TouchableHighlight>
 
 						<TouchableHighlight
+							underlayColor={'#19D1C8'}
+							activeOpacity={0.3}
 							onPress={() => {
 								this.props.navigation.navigate('C_Services');
 							}}
