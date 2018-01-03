@@ -3,7 +3,8 @@ import {
   View,
   StatusBar,
   Image,
-  StyleSheet
+  StyleSheet,
+  TouchableHighlight
 } from 'react-native';
 
 
@@ -30,7 +31,16 @@ export default class CenaPrincipal extends Component {
 
 				<View style={styles.menu}>
 					<View style={styles.menuGrupo}>
-						<Image style={styles.menuGrupoItem} source={menuCliente} />
+
+						<TouchableHighlight
+							onPress = {() => {
+								this.props.navigation.navigate('Clients');
+							}}
+						>
+							<Image style={styles.menuGrupoItem} source={menuCliente} />
+						</TouchableHighlight>
+
+
 						<Image style={styles.menuGrupoItem} source={menuContato} />
 					</View>
 

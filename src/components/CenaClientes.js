@@ -3,7 +3,8 @@ import {
   View,
   StatusBar,
   Image,
-  Text
+  Text,
+  StyleSheet
 } from 'react-native';
 
 
@@ -23,19 +24,19 @@ export default class CenaClientes extends Component {
 
 				<BarraNavegacao />
 
-				<View>
+				<View style={styles.cabecalho}>
 					<Image source={detalhesCliente} />
-					<Text>Nossos Clientes</Text>
+					<Text style={styles.txtTitulo}>Nossos Clientes</Text>
 				</View>
 
-				<View>
+				<View style={styles.detalheCliente}>
 					<Image source={cliente1} />
-					<Text>Lorem ipsum dolorem</Text>
+					<Text style={styles.textDetalheCliente}>Lorem ipsum dolorem</Text>
 				</View>
 
-				<View>
+				<View style={styles.detalheCliente}>
 					<Image source={cliente2} />
-					<Text>Lorem ipsum dolorem</Text>
+					<Text style={styles.textDetalheCliente}>Lorem ipsum dolorem</Text>
 				</View>
 				
 
@@ -43,3 +44,24 @@ export default class CenaClientes extends Component {
 		);
 	}
 }
+
+const styles = StyleSheet.create({
+	cabecalho: {
+		flexDirection: 'row',
+		marginTop: 20 
+	},
+	txtTitulo: {
+		fontSize: 30,
+		color: '#B9C941',
+		marginLeft: 10,
+		marginTop: 25 
+	},
+	detalheCliente: {
+		padding: 20,
+		marginTop: 10
+	},
+	textDetalheCliente: {
+		fontSize: 18,
+		marginLeft: 20
+	}
+});
