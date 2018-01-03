@@ -17,12 +17,11 @@ const cliente2 = require('../images/cliente2.png');
 export default class CenaClientes extends Component {
 	render() {
 		return (
-			<View>
+			<View style={{flex: 1, backgroundColor: '#FFF'}}>
 				<StatusBar 
 					hidden
 				/>
 
-				<BarraNavegacao />
 
 				<View style={styles.cabecalho}>
 					<Image source={detalhesCliente} />

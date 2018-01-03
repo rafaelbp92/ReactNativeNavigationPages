@@ -19,12 +19,11 @@ const menuServico = require('../images/menu_servico.png');
 export default class CenaPrincipal extends Component {
 	render() {
 		return (
-			<View>
+			<View style={{flex: 1, backgroundColor: '#FFF'}}>
 				<StatusBar 
 					hidden
 				/>
 
-				<BarraNavegacao />
 				<View style={styles.logo}>
 					<Image source={logo} />
 				</View>
@@ -33,20 +32,40 @@ export default class CenaPrincipal extends Component {
 					<View style={styles.menuGrupo}>
 
 						<TouchableHighlight
-							onPress = {() => {
+							onPress={() => {
 								this.props.navigation.navigate('Clients');
 							}}
 						>
 							<Image style={styles.menuGrupoItem} source={menuCliente} />
 						</TouchableHighlight>
 
-
-						<Image style={styles.menuGrupoItem} source={menuContato} />
+						<TouchableHighlight
+							onPress={() => {
+								this.props.navigation.navigate('Contacts');
+							}}
+						>
+							<Image style={styles.menuGrupoItem} source={menuContato} />
+						</TouchableHighlight>
+					
 					</View>
 
 					<View style={styles.menuGrupo}>
-						<Image style={styles.menuGrupoItem} source={menuEmpresa} />
-						<Image style={styles.menuGrupoItem} source={menuServico} />
+
+						<TouchableHighlight
+							onPress={() => {
+								this.props.navigation.navigate('Company');
+							}}
+						>
+							<Image style={styles.menuGrupoItem} source={menuEmpresa} />
+						</TouchableHighlight>
+
+						<TouchableHighlight
+							onPress={() => {
+								this.props.navigation.navigate('C_Services');
+							}}
+						>
+							<Image style={styles.menuGrupoItem} source={menuServico} />
+						</TouchableHighlight>									
 					</View>
 				</View>
 
